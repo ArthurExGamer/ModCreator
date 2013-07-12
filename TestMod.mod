@@ -1,19 +1,21 @@
 #Creates a mod called TestMod, by AwesomeSauceSoftware, using the forge api.
 mod "TestMod", "AwesomeSauceSoftware", :forge do
   #Create a block called "Test Block" ingame.
-  block "testBlock" do
+  block "Test Block" do
     #Nothing here, because this is regular block.
   end
   #Create a ore generator.
-  generator :ore, "testBlock", 10
+  generator :ore, "Test Block", 10
   #Create a recipe for the test block.
-  recipe istack("testBlock") do
+  recipe istack("Test Block") do
+    code ";"
     #Set the layout for the recipe.
     recipe_layout "xxx", "xxx", "xxx"
     #Assign the letter "x" to the name "dirt"
     recipe_assign "x", "dirt"
   end
-  item "testItem" do
+  jclass "HeyClass", "package awesomesaucesoftware.testmod;public class HeyClass {}"
+  item "Test Item" do
     #Add rightclick option.
     rightclick do
       #Make the rightclick print stuff.

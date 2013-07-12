@@ -99,6 +99,12 @@ def item(name)
   yield
   $mod.add_part(:item_end)
 end
+def code(code, location=1)
+  $mod.add_part(:code, code, location)
+end
+def jclass(name, code)
+  $mod.add_part(:jclass, name, code)
+end
 def rightclick
   $mod.add_part(:rightclick)
   yield
