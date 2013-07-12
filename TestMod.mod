@@ -1,3 +1,4 @@
+#Creates a mod called TestMod, by AwesomeSauceSoftware, using the forge api.
 mod "TestMod", "AwesomeSauceSoftware", :forge {
   #Create a block called "Test Block" ingame.
   block "testBlock" {
@@ -16,6 +17,7 @@ mod "TestMod", "AwesomeSauceSoftware", :forge {
     #Add rightclick option.
     rightclick {
       #Make the rightclick print stuff.
+      consolelog "Right clicked with the item."
     }
   }
 }
